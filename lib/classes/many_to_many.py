@@ -36,7 +36,7 @@ class Article:
             raise ValueError("Magazine must be of type Magazine")
         self._magazine = magazine
 
-       
+
 class Author:
     def __init__(self, name):
         if not isinstance(name, str) or len(name) == 0:

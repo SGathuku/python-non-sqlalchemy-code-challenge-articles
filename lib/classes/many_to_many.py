@@ -3,7 +3,7 @@ class Article:
 
     def __init__(self, author, magazine, title):
         if not isinstance(title, str) or not (5 <= len(title) <= 50):
-            raise ValueError("Title must be a string and between 5 and 50 characters")
+            raise ValueError("Title must be a string and between 5-50 characters")
         self._title = title
 
         self._author = author
@@ -47,11 +47,6 @@ class Author:
     @property
     def name(self):
         return self._name
-        @name.setter
-        def name(self, name):
-            if not isinstance(name, str) or len(name) == 0:
-                raise ValueError("Name must be a non-empty string")
-            self._name = name
 
     def articles(self):
         return self._articles
@@ -142,4 +137,4 @@ print(magazine_names)
 
 # This verifies the relationship
 print(f"Author1: {author1.name}, Articles: {[article.title for article in author1.articles()]}")
-print(f"Magazine2: {magazine2.name}, Articles: {[article.title for article in magazine2.articles()]}") 
+print(f"Magazine2: {magazine2.name}, Articles: {[article.title for article in magazine2.articles()]}")
